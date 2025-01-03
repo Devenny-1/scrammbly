@@ -1,0 +1,251 @@
+:root {
+    --primary: #4CAF50;
+    --secondary: #2196F3;
+    --warning: #ff9800;
+    --danger: #f44336;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.category-section, .game-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 90%;
+}
+
+.category-section {
+    text-align: center;
+}
+
+.category-main-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.category-option {
+    padding: 2rem;
+    border: 2px solid var(--primary);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: var(--primary);
+    color: white;
+}
+
+.category-option i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.game-container {
+    display: none;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.score-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.scrambled-word {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    color: #333;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.input-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1rem;
+    max-width: 400px;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+button {
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.submit-btn {
+    background-color: var(--primary);
+    color: white;
+}
+
+.hint-btn {
+    background-color: var(--warning);
+    color: white;
+}
+
+.skip-btn {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.start-btn {
+    background-color: var(--primary);
+    color: white;
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.timer {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.hint-text {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-top: 1rem;
+    min-height: 2rem;
+}
+
+.streak-container {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.streak-flame {
+    color: #ff4500;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.feedback {
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: bold;
+    min-height: 1.5rem;
+}
+
+.correct { color: var(--primary); }
+.incorrect { color: var(--danger); }
+
+.game-controls {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.game-active .game-controls {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.game-over-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    display: none;
+    z-index: 10;
+}
+
+.game-over-screen h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.final-score {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin: 1rem 0;
+}
+
+.play-again-btn {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.play-again-btn:hover {
+    opacity: 0.9;
+}
+
+.back-btn {
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.back-btn:hover {
+    opacity: 0.9;
+}

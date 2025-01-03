@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrambly</title>
+
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+    <div class="category-section" id="category-section">
+        <h1>Word Scramble</h1>
+        <h2>Choose a Category</h2>
+        <div class="category-main-box">
+            <div class="category-option" data-category="technology">
+                <i>🖥️</i>
+                <h3>Technology</h3>
+                <p>Computer and tech terms</p>
+            </div>
+            <div class="category-option" data-category="food">
+                <i>🍔</i>
+                <h3>Food</h3>
+                <p>Delicious cuisine words</p>
+            </div>
+            <div class="category-option" data-category="family">
+                <i>👨‍👩‍👧‍👦</i>
+                <h3>Family</h3>
+                <p>Family relationship terms</p>
+            </div>
+            <div class="category-option" data-category="nature">
+                <i>🌲</i>
+                <h3>Nature</h3>
+                <p>Words from the natural world</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-container" id="game-container">
+        <button class="back-btn" id="back-btn">← Back to Categories</button>
+        <div class="header">
+            <h1>Word Scramble</h1>
+        </div>
+        
+        <div class="score-container">
+            <div>Score: <span id="score">0</span></div>
+            <div>Level: <span id="level">1</span></div>
+        </div>
+        
+        <div class="timer">Time: <span id="time">60</span>s</div>
+        
+        <div class="scrambled-word" id="scrambled-word"></div>
+        
+        <div class="game-controls">
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your answer here..." autocomplete="off">
+            </div>
+            
+            <div class="button-container">
+                <button class="hint-btn" id="hint-btn">Hint &#10024;</button>
+                <button class="submit-btn" id="submit-btn">Submit &#10003;</button>
+                <button class="skip-btn" id="skip-btn">Skip &#9193;</button>
+            </div>
+        </div>
+        
+        <button class="start-btn" id="start-btn">Start Game</button>
+        
+        <div class="hint-text" id="hint-text"></div>
+        
+        <div class="feedback" id="feedback"></div>
+        
+        <div class="streak-container">
+            Streak: <span id="streak">0</span> <span class="streak-flame">&#128293;</span>
+        </div>
+    </div>
+    
+    <div class="game-over-screen" id="game-over-screen">
+        <h2>Game Over!</h2>
+        <p>Your final score:</p>
+        <div class="final-score" id="final-score">0</div>
+        <button class="play-again-btn" id="play-again-btn">Play Again</button>
+    </div>
+    
+
+    <script src="scrambly.js"></script>
+    
+</body>
+</html>
